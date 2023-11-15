@@ -1,4 +1,7 @@
 #include "Function.h"
+#include <vector>
+#include <iostream>
+using namespace std;
 
 int main()
 {
@@ -8,6 +11,30 @@ int main()
 	
 	// Recursive
 
+
+	while(true)
+	{
+		cin >> n;
+		if ( n < 0) 
+			cout << "Invalid n";
+		else break;
+	}
+
+	// Recursive
+
+
+	// Loop
+
+
+	// Dynamic
+	vector<long long> fibo {0,1};
+	fibonacci_dynamic(n, fibo);
+    cout << n << "th Fibonacci: " << fibo[n] << endl;
+
+	// Matrix
+
+    
+=======
 
 	// Loop
 	for (int i : n)
@@ -23,5 +50,6 @@ int main()
 	// Dynamic
 
 	// Matrix
+
 	return 0;
 }
