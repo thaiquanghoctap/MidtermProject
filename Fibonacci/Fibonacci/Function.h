@@ -26,6 +26,7 @@ class Timer
     }
 };
 
+/*
 class Timer
 {
 public:
@@ -46,13 +47,9 @@ public:
     {
         std::cout << "Time spent: " << (end - start)/ float(CLOCKS_PER_SEC) << " seconds" << std::endl;
     }
-};
+};*/
+
 int fibonacci_recursive();
-
-int fibonacci_loop();
 void fibonacci_dynamic(int n, std::vector<long long> &fibo);
-
 int fibonacci_loop(const int& n);
-int fibonacci_dynamic();
-
 int fibonacci_matrix();

@@ -4,8 +4,6 @@ using namespace std;
 
 int fibonacci_recursive();
 
-int fibonacci_loop();
-
 void fibonacci_dynamic(int n, vector<long long> &fibo)
 {
     Timer timer;
@@ -19,7 +17,6 @@ void fibonacci_dynamic(int n, vector<long long> &fibo)
 }
 
 int fibonacci_matrix();
-=======
 
 int fibonacci_loop(const int& n) {
 	if (n < 2)
@@ -34,6 +31,3 @@ int fibonacci_loop(const int& n) {
 	}
 	return fn;
 }
-int fibonacci_dynamic();
-int fibonacci_matrix();
-

@@ -6,37 +6,21 @@ using namespace std;
 int main()
 {
 	//int n = 0;
-	int n[5] = { 0, 2, 3, 90000, 100000};
+	
 	Timer time;
 	
 	// Recursive
 
 
-	while(true)
-	{
-		cin >> n;
-		if ( n < 0) 
-			cout << "Invalid n";
-		else break;
-	}
-
-	// Recursive
-
-
-	// Loop
-
-
 	// Dynamic
+	int m = 0;
+	cin >> m;
 	vector<long long> fibo {0,1};
-	fibonacci_dynamic(n, fibo);
-    cout << n << "th Fibonacci: " << fibo[n] << endl;
-
-	// Matrix
-
-    
-=======
+	fibonacci_dynamic(m, fibo);
+    cout << m << "th Fibonacci: " << fibo[m] << endl;
 
 	// Loop
+	int n[5] = { 0, 2, 3, 90000, 100000 };
 	for (int i : n)
 	{
 		std::cout << "Fibonacci using Loop\n";
@@ -47,7 +31,6 @@ int main()
 		std::cout << "f(" << i << ") = " << fn << "\n";
 	}
 
-	// Dynamic
 
 	// Matrix
 
