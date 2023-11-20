@@ -6,29 +6,6 @@
 
 class Timer
 {
-    public: 
-        time_t start;
-        time_t end;
-
-    void start_timer()
-    {
-        this->start = std::time(NULL);
-    }
-
-    void end_timer()
-    {
-        this->end = std::time(NULL);
-    }
-
-    void count_time() 
-    { 
-        std::cout <<"Time spent: " << difftime(start, end) << " seconds" << std::endl;
-    }
-};
-
-/*
-class Timer
-{
 public:
     time_t start;
     time_t end;
@@ -45,11 +22,14 @@ public:
 
     void count_time()
     {
-        std::cout << "Time spent: " << (end - start)/ float(CLOCKS_PER_SEC) << " seconds" << std::endl;
+        std::cout << "Time spent: " << double(end - start)/ double(CLOCKS_PER_SEC) << " seconds" << std::endl;
     }
-};*/
+};
 
 int fibonacci_recursive();
-void fibonacci_dynamic(int n, std::vector<long long> &fibo);
-int fibonacci_loop(const int& n);
-int fibonacci_matrix();
+long long fibonacci_loop(const int& n);
+void fibonacci_dynamic(int n, std::vector<long long>& fibo);
+
+long long fibonacci_matrix(int n);
+void pow_matrix(long long F[2][2], int n);
+void multiply_matrix(long long F[2][2], long long T[2][2]);
