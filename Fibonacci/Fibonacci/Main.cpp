@@ -8,10 +8,18 @@ int main()
 	int test[] = {92, 100000, 10000000};
 
 
-	// Recursive
 
 	for (int n : test)
 	{
+
+		// Recursive
+		Timer time1{};
+		std::cout << "\nFibonacci using Recursive\n";
+		time1.start_timer();
+		long long f_recursive = fibonacci_recursive(n);
+		time1.end_timer();
+		std::cout << "F(" << n << ") = " << f_recursive << "\n";
+		time1.count_time();
 		// Loop
 		Timer time2{};
 		std::cout << "\nFibonacci using Loop\n";

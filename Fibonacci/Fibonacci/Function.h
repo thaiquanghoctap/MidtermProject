@@ -26,7 +26,7 @@ public:
     }
 };
 
-int fibonacci_recursive();
+long long fibonacci_recursive(int n);
 long long fibonacci_loop(const int& n);
 void fibonacci_dynamic(int n, std::vector<long long>& fibo);
 

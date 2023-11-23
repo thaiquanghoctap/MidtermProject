@@ -2,9 +2,11 @@
 #include <vector>
 using namespace std;
 
-int fibonacci_recursive()
-{
-
+long long fibonacci_recursive(int n) {
+	if (n <= 1) {
+		return n;
+	}
+	return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2);
 }
 
 long long fibonacci_loop(const int& n) {
