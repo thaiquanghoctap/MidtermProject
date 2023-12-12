@@ -3,23 +3,26 @@
 
 int main()
 {
-	
-	//int n = 0;
-	int test[] = {92, 100000, 10000000};
-
-
+	int test[] = {40, 50, 92, 100000, 10000000};
 
 	for (int n : test)
 	{
-
 		// Recursive
-		Timer time1{};
-		std::cout << "\nFibonacci using Recursive\n";
-		time1.start_timer();
-		long long f_recursive = fibonacci_recursive(n);
-		time1.end_timer();
-		std::cout << "F(" << n << ") = " << f_recursive << "\n";
-		time1.count_time();
+		if (n <= 50)
+		{	
+			Timer time1{};
+			std::cout << "\nFibonacci using Recursive\n";
+			time1.start_timer();
+			long long f_recursive = fibonacci_recursive(n);
+			time1.end_timer();
+			std::cout << "F(" << n << ") = " << f_recursive << "\n";
+			time1.count_time();
+		}
+		else
+		{
+			std::cout << "\nToo much time when using Recursive\n";
+		}
+
 		// Loop
 		Timer time2{};
 		std::cout << "\nFibonacci using Loop\n";
