@@ -1,5 +1,7 @@
 #include "Function.h"
 #include <vector>
+#include <iostream>
+#include <cmath>
 using namespace std;
 
 long long fibonacci_recursive(int n) {
@@ -28,6 +30,20 @@ void fibonacci_dynamic(int n, vector<long long> &fibo)
     int len = fibo.size();
     for (int i = len; i <= n; i++)
         fibo.push_back(fibo[i-1] + fibo[i-2]);
+}
+
+long long fibonacci_goldenRatio(int n)
+{
+	double phi = (1 + sqrt(5)) / 2;
+	return ceil((pow(phi, n) - pow(1-phi, n)) / sqrt(5));
+}
+
+double pow(double a, int n)
+{
+	double res=1;
+	for (;n; n>>=1, a = a*a)
+		if (n&1) res *= a;
+	return res;
 }
 
 long long fibonacci_matrix(int n)

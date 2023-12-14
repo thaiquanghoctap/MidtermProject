@@ -42,6 +42,16 @@ int main()
 		std::cout << "F(" << n << ") = " << fibo[n] << "\n";
 		time3.count_time();
 
+		// Golden ratio Formula
+		Timer time5{};
+		std::cout << "\nFibonacci using Golden Ratio Formula\n";
+		time5.start_timer();
+		long long f_goldenratio = fibonacci_goldenRatio(n);
+		time5.end_timer();
+		std::cout << "F(" << n << ") = " << f_goldenratio << "\n";
+		time5.count_time();
+
+
 		// Matrix
 		Timer time4{};
 		std::cout << "\nFibonacci using Matrix\n";
